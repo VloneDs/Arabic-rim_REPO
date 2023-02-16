@@ -1,11 +1,15 @@
 from roman import *
+choise = str(input('1 - из римского числа в арабское число.\n2 - из арабского число в римское число.\n Ответ:  '))
 
-arabic = [str(x) for x in input('Введите римское чилсло что преобразовать в арабское: ').split()]
-for i in arabic:
-    print(i, '->' ,roman_to_int(i))
+if choise == '1':
+    arabic = [str(x) for x in input('Введите римское число что-бы преобразовать в арабское: ').split()]
+    for i in arabic:
+        print(i, '->' ,roman_to_int(i))
 
+elif choise == '2':
+    roman = [int(x) for x in input('Введите арабское число что-бы преобразовать в римское: ').split()]
+    for i in roman:
+      print(i, '->',int_to_roman(i))
 
-number = [int(x) for x in input('Введите арабское чилсло что преобразовать в римское: ').split()]
-# a=[4, 58, 1994, 26, 99, 69, 80]
-for i in number:
-    print(i, '->',int_to_roman(i))
+else:
+    print('Повторите еще раз проверив правильность ввода')
