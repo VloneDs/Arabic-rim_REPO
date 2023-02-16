@@ -11,12 +11,12 @@ def int_to_roman(num:int)->str:
     info = ['I', 'X', 'C', 'M']
     #      0    1    2    3   
     weird_number = ''
-    i = 0
+    number = 0
     while num != 0:
         n = num % 10
-        weird_number = info[i] * n + weird_number
+        weird_number = info[number] * n + weird_number
         num //= 10
-        i += 1
+        number += 1
     res = weird_number
     res = res.replace('IIIIIIIII','IX')
     res = res.replace('IIIII', 'V')
